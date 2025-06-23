@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAAS - No as a Service</title>
+
+    <!-- Geist Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <h1 class="logo">
+            <span class="logo-icon">🚫</span>
+            NAAS
+          </h1>
+          <p class="tagline">No as a Service</p>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <i data-lucide="sun"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main">
+        <div class="container">
+          <!-- Input Section -->
+          <section class="input-section">
+            <div class="input-card">
+              <h2 class="input-title">What do you need to say no to?</h2>
+
+              <!-- Text Input -->
+              <div class="input-group">
+                <textarea
+                  id="textInput"
+                  class="text-input"
+                  placeholder="e.g., My friend wants me to lend them money again..."
+                  rows="4"
+                ></textarea>
+
+                <!-- Input Actions -->
+                <div class="input-actions">
+                  <button
+                    class="voice-btn"
+                    id="voiceBtn"
+                    aria-label="Record voice"
+                  >
+                    <i data-lucide="mic"></i>
+                    <span class="voice-status" id="voiceStatus"
+                      >Tap to record</span
+                    >
+                  </button>
+
+                  <div class="tone-selector">
+                    <label for="toneSelect" class="tone-label">Tone:</label>
+                    <select id="toneSelect" class="tone-select">
+                      <option value="gentle">Gentle</option>
+                      <option value="firm">Firm</option>
+                      <option value="professional">Professional</option>
+                      <option value="casual">Casual</option>
+                    </select>
+                  </div>
+
+                  <button class="submit-btn" id="submitBtn">
+                    <i data-lucide="send"></i>
+                    Generate No
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Loading State -->
+          <section
+            class="loading-section"
+            id="loadingSection"
+            style="display: none"
+          >
+            <div class="loading-card">
+              <div class="loading-spinner"></div>
+              <p class="loading-text">Crafting your perfect "No"...</p>
+            </div>
+          </section>
+
+          <!-- Response Section -->
+          <section
+            class="response-section"
+            id="responseSection"
+            style="display: none"
+          >
+            <div class="response-card">
+              <div class="response-header">
+                <h3 class="response-title">Your Graceful "No"</h3>
+                <div class="tact-meter-container">
+                  <span class="tact-label">Tact Level</span>
+                  <div class="tact-meter">
+                    <div class="tact-fill" id="tactFill"></div>
+                  </div>
+                  <span class="tact-value" id="tactValue">0%</span>
+                </div>
+              </div>
+
+              <div class="response-content">
+                <p class="response-text" id="responseText"></p>
+              </div>
+
+              <div class="response-actions">
+                <button class="action-btn" id="regenerateBtn">
+                  <i data-lucide="refresh-cw"></i>
+                  Regenerate
+                </button>
+                <button class="action-btn" id="copyBtn">
+                  <i data-lucide="copy"></i>
+                  Copy
+                </button>
+                <button class="action-btn" id="speakBtn">
+                  <i data-lucide="volume-2"></i>
+                  Speak
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Error State -->
+          <section
+            class="error-section"
+            id="errorSection"
+            style="display: none"
+          >
+            <div class="error-card">
+              <div class="error-icon">
+                <i data-lucide="alert-circle"></i>
+              </div>
+              <h3 class="error-title">Something went wrong</h3>
+              <p class="error-message" id="errorMessage"></p>
+              <button class="error-btn" id="retryBtn">
+                <i data-lucide="rotate-ccw"></i>
+                Try Again
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p class="footer-text">
+            Made with ❤️ by Habib Adebayo for better boundaries.
+            <span class="footer-divider">•</span>
+            Powered by Gemini AI
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/script.js"></script>
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
