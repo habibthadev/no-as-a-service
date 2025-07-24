@@ -54,7 +54,7 @@ app.post("/ask", async (req, res) => {
             temperature: 0.7,
             topK: 40,
             topP: 0.95,
-            maxOutputTokens: 200,
+            maxOutputTokens: 500,
           },
         }),
       }
