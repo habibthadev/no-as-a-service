@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 app.post("/ask", async (req, res) => {
   try {
-    const modelName = "gemini-1.5-flash";
+    const modelName = "gemini-2.0-flash";
     const { prompt } = req.body;
 
     if (!prompt) {
