@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+font-family: "Kumbh Sans", sans-serif;
 }
 
 :root {
@@ -65,8 +66,6 @@
 }
 
 html {
-  font-family: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
