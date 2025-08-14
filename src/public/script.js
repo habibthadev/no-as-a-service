@@ -226,7 +226,9 @@ class NAASApp {
   }
 
   buildPrompt(context, tone) {
-    return `You are a helpful assistant that helps users say "No" politely. Given the context below, generate a warm, tactful, emotionally intelligent response that gracefully says "No" without sounding rude or robotic.
+  return `You are a helpful assistant that helps users say "No" politely. 
+Given the context below, generate a warm, tactful, emotionally intelligent response that gracefully says "No" 
+without sounding rude, robotic, or overly formal. 
 
 Context:
 ${context}
@@ -236,13 +238,15 @@ Tone: ${tone}
 Guidelines:
 - Sound human, kind, and firm.
 - Avoid corporate jargon or AI-sounding phrases.
-- Max 2–4 sentences.
+- Use light, tasteful humor to make the refusal feel friendly and less awkward.
+- Keep it 2–4 sentences.
 - Be empathetic but clear in the refusal.
 - Offer alternatives when appropriate.
 - Match the requested tone (${tone}).
+- Humor should be natural, not forced — think witty friend, not stand-up comedian.
 
 Generate only the "No" response, nothing else.`;
-  }
+}
 
   // UI State Management
   showLoading() {
